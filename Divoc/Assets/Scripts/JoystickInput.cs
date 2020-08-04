@@ -13,16 +13,24 @@ public class JoystickInput : MonoBehaviour
     [SerializeField]
     private Transform objectToMove;
 
+    private Rigidbody2D rb2D;
+
+
+    private void Start()
+    {
+        rb2D = GetComponent<Rigidbody2D>();
+    }
+
     private void Update()
     {
-        objectToMove.Translate(leftJoystick.Direction, Space.World);
+        rb2D.velocity = leftJoystick.Direction * 6;
         if(rightJoystick.Direction.magnitude != 0f)
         {
-            objectToMove.transform.up = rightJoystick.Direction;
+            objectToMove.transform.right = rightJoystick.Direction;
         }
-        else
+        else if(leftJoystick.Direction.magnitude != 0f)
         {
-            objectToMove.transform.up = leftJoystick.Direction;
+            objectToMove.transform.right = leftJoystick.Direction;
         }
     }
 }
