@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    [SerializeField]
+    private Joystick joystick;
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -12,7 +14,11 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("firel"))
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Shoot();
+        //}
+        if(joystick.Direction.magnitude > 0)
         {
             Shoot();
         }
