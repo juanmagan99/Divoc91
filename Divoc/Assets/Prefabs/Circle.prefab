@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4965534712822636326}
   - component: {fileID: -8716224816869089554}
   - component: {fileID: -3178408137375480543}
+  - component: {fileID: -497182265186634110}
   m_Layer: 11
   m_Name: Circle
   m_TagString: Untagged
@@ -143,4 +144,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abce120531b6ed4883a79b706b39ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
+--- !u!114 &-497182265186634110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4965534712822636323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8417befd90b7feb49898498cb266999e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagePoints: 1
